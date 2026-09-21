@@ -3,8 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class profil_sekolah extends Model
 {
     //
+    use HasUuids;
+
+    protected $table = 'profil_sekolah';
+    protected $primaryKey = 'id_profil';
+    protected $keyType = 'string';
+
+    protected $guarded = [];
 }

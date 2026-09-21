@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [AuthController::class, 'index'])->name('public.dashboard');
+Route::get('/', [DashboardController::class, 'indexPublic'])->name('public.dashboard');
 Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
+Route::post('/login-proses', [AuthController::class, 'prosesLogin'])->name('admin.login_proses');
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');

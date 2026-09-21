@@ -17,13 +17,14 @@
         <div class="form login">
           <span class="title">Login</span>
 
-          <form action="#">
+          <form action="{{ route('admin.login_proses') }}" method="POST">
+            @csrf
             <div class="input-field">
-              <input type="text" placeholder="Enter your email" required />
+              <input type="email" placeholder="Enter your email" name="email" id="email" required />
               <i class="uil uil-envelope icon"></i>
             </div>
             <div class="input-field">
-              <input type="password" class="password" placeholder="Enter your password" required />
+              <input type="password" class="password" placeholder="Enter your password" name="password" id="password" required />
               <i class="uil uil-lock icon"></i>
               <i class="uil uil-eye-slash showHidePw"></i>
             </div>
@@ -38,7 +39,7 @@
             </div>
 
             <div class="input-field button">
-              <input type="button" value="Login" />
+              <input type="submit" value="Login"/>
             </div>
           </form>
 

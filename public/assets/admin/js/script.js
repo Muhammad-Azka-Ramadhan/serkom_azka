@@ -25,61 +25,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
   feather.replace();
 
-  (function () {
-    var sidebar = document.querySelector('.sidebar'),
-        catSubMenu = document.querySelector('.cat-sub-menu'),
-        sidebarBtns = document.querySelectorAll('.sidebar-toggle');
+  // ======================================================
+// SIDEBAR TOGGLE + SUBMENU
+// ======================================================
 
-    var _iterator = _createForOfIteratorHelper(sidebarBtns),
-        _step;
+(function () {
 
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var sidebarBtn = _step.value;
+    // =========================
+    // TOGGLE SIDEBAR
+    // =========================
 
-        if (sidebarBtn && catSubMenu && sidebarBtn) {
-          sidebarBtn.addEventListener('click', function () {
-            var _iterator2 = _createForOfIteratorHelper(sidebarBtns),
-                _step2;
+    var sidebar = document.querySelector('.sidebar');
+    var sidebarBtns = document.querySelectorAll('.sidebar-toggle');
 
-            try {
-              for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                var sdbrBtn = _step2.value;
-                sdbrBtn.classList.toggle('rotated');
-              }
-            } catch (err) {
-              _iterator2.e(err);
-            } finally {
-              _iterator2.f();
-            }
+    sidebarBtns.forEach(function (sidebarBtn) {
 
+        sidebarBtn.addEventListener('click', function () {
+
+            // Buka / tutup sidebar
             sidebar.classList.toggle('hidden');
-            catSubMenu.classList.remove('visible');
-          });
-        }
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-  })();
 
-  (function () {
+            // Putar icon tombol
+            sidebarBtns.forEach(function (btn) {
+                btn.classList.toggle('rotated');
+            });
+
+        });
+
+    });
+
+
+    // =========================
+    // SUBMENU
+    // =========================
+
     var showCatBtns = document.querySelectorAll('.show-cat-btn');
 
-    if (showCatBtns) {
-      showCatBtns.forEach(function (showCatBtn) {
+    showCatBtns.forEach(function (showCatBtn) {
+
+        // Submenu berada tepat setelah tombol
         var catSubMenu = showCatBtn.nextElementSibling;
+
+        // Tombol panah di dalam menu
+        var catBtnToRotate = showCatBtn.querySelector('.category__btn');
+
+
         showCatBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          catSubMenu.classList.toggle('visible');
-          var catBtnToRotate = document.querySelector('.category__btn');
-          catBtnToRotate.classList.toggle('rotated');
+
+            e.preventDefault();
+
+            // Buka / tutup submenu
+            catSubMenu.classList.toggle('visible');
+
+            // Putar panah
+            if (catBtnToRotate) {
+                catBtnToRotate.classList.toggle('rotated');
+            }
+
         });
-      });
-    }
-  })();
+
+    });
+
+})();
 
   (function () {
     var showMenu = document.querySelector('.lang-switcher');
