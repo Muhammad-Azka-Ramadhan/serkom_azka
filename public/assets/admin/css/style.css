@@ -1964,6 +1964,7 @@ label {
   overflow-x: auto;
   overflow-y: hidden;
   margin-bottom: 20px;
+  width: calc(100% + 40px);
 }
 
 .table-wrapper table {

@@ -17,11 +17,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        $this->call([
+            SiswaSeeder::class,
+        ]);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'username' => 'user',
-            'email' => 'test@example.com',
+            'name' => 'Admin Admin',
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('password')
         ]);
     }

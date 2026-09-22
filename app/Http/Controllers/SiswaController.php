@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\siswa;
 
 class SiswaController extends Controller
 {
@@ -11,6 +12,11 @@ class SiswaController extends Controller
         $data = [
             'title' => 'Siswa'
         ];
-        return view("admin.siswa", $data);
+
+        $siswa = siswa::orderBy('nama__siswa', 'asc')->paginate(10);
+        return view("admin.siswa.index", [
+            'data' => $data,
+            'siswa' => $siswa
+        ]);
     }
 }
