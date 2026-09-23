@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\profil_sekolah;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         $this->call([
             SiswaSeeder::class,
+            ProfilsekolahSeeder::class,
         ]);
 
         User::factory()->create([

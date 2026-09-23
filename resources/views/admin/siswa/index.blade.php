@@ -9,10 +9,10 @@
 
     <!-- Judul + Button Tambah -->
     <div class="main-title-wrapper">
-        <h2 class="main-title">Data Warga</h2>
+        <h2 class="main-title">Data Siswa</h2>
 
         <button class="primary-default-btn" type="button">
-            + Tambah Warga
+            + Tambah Siswa
         </button>
     </div>
 
@@ -37,7 +37,6 @@
                     <tr>
                         <td>Belum ada data guru</td>
                     </tr>
-                @endforelse
                 <tr>
                     <td>{{ $siswa->firstItem() + $index}}</td>
                     <td>{{ $item->nisn }}</td>
@@ -54,6 +53,7 @@
                         </button>
                     </td>
                 </tr>
+                @endforelse
             </tbody>
         </table>
     </div>

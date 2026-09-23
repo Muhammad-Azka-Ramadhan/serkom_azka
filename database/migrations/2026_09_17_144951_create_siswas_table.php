@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('siswa', function (Blueprint $table) {
             $table->uuid('id_siswa')->primary();
             $table->string('nisn', 10);
-            $table->string('nama__siswa', 40);
+            $table->string('nama_siswa', 40);
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
             $table->year('tahun_masuk');
             $table->timestamps();

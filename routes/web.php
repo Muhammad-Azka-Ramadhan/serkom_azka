@@ -8,6 +8,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\ProfilsekolahController;
 use App\Http\Controllers\SiswaController;
+use App\Models\profil_sekolah;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -20,12 +21,24 @@ Route::post('/login-proses', [AuthController::class, 'prosesLogin'])->name('admi
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    Route::get('/siswa', [SiswaController::class, 'index'])->name('admin.siswa');
-    Route::get('/guru', [GuruController::class, 'index'])->name('admin.guru');
+
+    Route::prefix('siswa')->group(function () {
+        Route::get('/', [SiswaController::class, 'index'])->name('admin.siswa');
+    });
+
+    Route::prefix('guru')->group(function () {
+        Route::get('/', [GuruController::class, 'index'])->name('admin.guru');
+
+    });
+
     Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
     Route::get('/berita', [BeritaController::class, 'index'])->name('admin.berita');
     Route::get('/eskul', [EkstrakurikulerController::class, 'index'])->name('admin.eskul');
-    Route::get('/profil', [ProfilsekolahController::class, 'index'])->name('admin.profil');
+
+    Route::prefix('profil')->group(function () {
+        Route::get('/', [ProfilsekolahController::class, 'index'])->name('admin.profil');
+        Route::get('{id}/edit', [profil_sekolah::class, 'edit'])->name('admin.profil.edit');
+    });
 });
 
 

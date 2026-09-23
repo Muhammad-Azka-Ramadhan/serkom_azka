@@ -17,7 +17,7 @@ class SiswaSeeder extends Seeder
         //
         siswa::create([
             'nisn'  => '0087922980',
-            'nama__siswa' => 'Ahmad Faisal',
+            'nama_siswa' => 'Ahmad Faisal',
             'jenis_kelamin' => 'Laki-laki',
             'tahun_masuk' => '2025'
         ]);

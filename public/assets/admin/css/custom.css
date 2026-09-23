@@ -71,3 +71,346 @@
 .full-table {
     width: 100% !important;
 }
+
+.school-profile {
+    margin-bottom: 20px;
+}
+
+.school-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.school-logo {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f6fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.school-data {
+    flex: 1;
+}
+
+.school-data h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #171717;
+}
+
+.school-data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 40px;
+}
+
+.school-data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.school-data-item span {
+    font-size: 13px;
+    color: #767676;
+}
+
+.school-data-item strong {
+    font-size: 14px;
+    font-weight: 500;
+    color: #171717;
+}
+
+.school-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.school-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #767676;
+}
+
+.school-photo {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+
+    .school-profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .school-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .school-two-column {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.page-subtitle {
+    margin: -12px 0 0;
+    font-size: 14px;
+    color: #767676;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.profile-form-card {
+    margin-bottom: 20px;
+}
+
+.form-section-header {
+    margin-bottom: 25px;
+}
+
+.form-section-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #171717;
+}
+
+.form-section-header p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #767676;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #171717;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #dadbe4;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    color: #171717;
+    box-sizing: border-box;
+}
+
+.form-group input {
+    height: 44px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b8bac5;
+}
+
+
+/* Alamat full width */
+
+.form-group:has(textarea#alamat) {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   LOGO & FOTO
+========================= */
+
+.school-form-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-upload-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-preview {
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f6fa;
+}
+
+.logo-preview {
+    width: 110px;
+    height: 110px;
+}
+
+.logo-preview img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.school-photo-preview {
+    width: 180px;
+    height: 110px;
+}
+
+.school-photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-upload-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.image-upload-content input {
+    display: none;
+}
+
+.image-upload-content span {
+    font-size: 11px;
+    color: #767676;
+}
+
+.upload-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px 13px;
+    border: 1px solid #dadbe4;
+    border-radius: 5px;
+    background: #fff;
+    color: #171717;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background: #f5f6fa;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.form-action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.secondary-btn {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #dadbe4;
+    border-radius: 4px;
+    background: #fff;
+    color: #767676;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #f5f6fa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .school-form-media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group:has(textarea#alamat) {
+        grid-column: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .image-upload-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .school-photo-preview {
+        width: 100%;
+        height: 180px;
+    }
+
+    .form-action {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .form-action button {
+        width: 100%;
+    }
+
+}
