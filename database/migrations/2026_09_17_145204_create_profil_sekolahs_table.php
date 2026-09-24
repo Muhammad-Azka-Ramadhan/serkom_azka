@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id_profil')->primary();
             $table->string('nama_sekolah', 40);
             $table->string('kepala_sekolah', 40);
-            $table->string('foto', 100)->nullable;
+            $table->string('foto', 100)->nullable();
             $table->string('logo', 100);
             $table->string('npsn', 10);
             $table->text('alamat');

@@ -11,6 +11,6 @@ class BeritaController extends Controller
         $data = [
             'title' => 'Berita'
         ];
-        return view("admin.berita", $data); 
+        return view("admin.berita.index", $data); 
     }
 }

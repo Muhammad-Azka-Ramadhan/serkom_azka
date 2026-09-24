@@ -13,7 +13,7 @@ class SiswaController extends Controller
             'title' => 'Siswa'
         ];
 
-        $siswa = siswa::orderBy('nama__siswa', 'asc')->paginate(10);
+        $siswa = siswa::orderBy('nama_siswa', 'asc')->paginate(10);
         return view("admin.siswa.index", [
             'data' => $data,
             'siswa' => $siswa

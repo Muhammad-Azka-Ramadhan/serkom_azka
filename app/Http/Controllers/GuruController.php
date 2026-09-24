@@ -11,6 +11,6 @@ class GuruController extends Controller
         $data = [
             'title' => 'Guru'
         ];
-        return view("admin.guru", $data);
+        return view("admin.guru.index", $data);
     }
 }

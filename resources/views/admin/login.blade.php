@@ -20,11 +20,11 @@
           <form action="{{ route('admin.login_proses') }}" method="POST">
             @csrf
             <div class="input-field">
-              <input type="email" placeholder="Enter your email" name="email" id="email" required />
+              <input type="email" placeholder="Enter your email" name="email" id="email" required/>
               <i class="uil uil-envelope icon"></i>
             </div>
             <div class="input-field">
-              <input type="password" class="password" placeholder="Enter your password" name="password" id="password" required />
+              <input type="password" class="password" placeholder="Enter your password" name="password" id="password" required/>
               <i class="uil uil-lock icon"></i>
               <i class="uil uil-eye-slash showHidePw"></i>
             </div>

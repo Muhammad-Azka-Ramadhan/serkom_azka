@@ -7,7 +7,9 @@
     <!-- Judul Halaman -->
     <div class="main-title-wrapper">
         <h2 class="main-title">Profil Sekolah</h2>
-        <a href="{{ route('admin.profil.edit') }}" class="primary-default-btn"></a>
+        {{-- @foreach ($profilSekolah as $item)
+        <a href="{{ route('admin.profil.edit', $item->id) }}" class="primary-default-btn"></a>
+        @endforeach --}}
     </div>
     <!-- Informasi Utama -->
     <div class="white-block school-profile">

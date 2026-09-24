@@ -19,9 +19,9 @@ class ProfilsekolahController extends Controller
         ]); 
     }
 
-    public function edit($id_user){
-        $data = profil_sekolah::findOrFail($id_user);
+    public function edit($id){
+        $data = profil_sekolah::findOrFail($id);
 
-        return view('admin.profil.edit', $data);
+        return view('admin.profil.edit', compact('profil_sekolah'));
     }
 }

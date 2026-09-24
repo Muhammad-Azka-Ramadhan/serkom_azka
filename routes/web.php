@@ -37,7 +37,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('profil')->group(function () {
         Route::get('/', [ProfilsekolahController::class, 'index'])->name('admin.profil');
-        Route::get('{id}/edit', [profil_sekolah::class, 'edit'])->name('admin.profil.edit');
+        // Route::get('{id}/edit', [ProfilsekolahController::class, 'edit'])->name('admin.profil.edit');
     });
 });
 
